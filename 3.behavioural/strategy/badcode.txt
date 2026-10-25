@@ -1,0 +1,30 @@
+It allows you to choose different algorithms/behaviours
+Encapsulates different algorithms and allows them to be interchangeable.
+
+3 components in the pattern 
+    1.strategy class (abstract class)
+    2.core strategies(children of abstract class)
+    3.context: initialized with one of core strategy and can change strategy and can do the action(pay, sort, etc).
+
+Imagine you have:
+Payment system
+Different payment methods:
+1. Credit Card  2.PayPal  3.UPI
+
+Bad implementation usually becomes:
+if payment_type == "credit":
+    ...
+elif payment_type == "paypal":
+    ...
+elif payment_type == "upi":
+    ...
+❌Hard to extend
+❌ Violates Open Closed Principle
+❌ Messy conditional logic
+❌ Hard to test
+
+
+Strategy Pattern solves this by:
+✔ Separating algorithms into classes
+✔ Making them replaceable
+✔ Making code extensible

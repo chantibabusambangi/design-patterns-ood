@@ -1,0 +1,4 @@
+path="C:\Users\91944\Downloads\cgpa.xlsx"
+import pandas as pd
+df=pd.read_csv(path)
+print(df.head())
